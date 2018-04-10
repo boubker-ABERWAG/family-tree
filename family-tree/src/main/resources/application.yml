@@ -1,0 +1,6 @@
+spring:
+  data:
+    neo4j:
+      uri: bolt://sofnul.fr
+      username: neo4j
+      password: bkkb0207
