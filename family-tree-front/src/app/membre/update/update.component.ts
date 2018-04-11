@@ -38,7 +38,7 @@ export class UpdateComponent implements OnInit {
   }
 
   cancel() {
-    this._router.navigate(['/membre']);
+    this._router.navigate(['/membre/' + this.person.pseudo]);
   }
 
 }

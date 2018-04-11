@@ -8,12 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
   MatCardModule,
-  MatCheckboxModule,
+  MatCheckboxModule, MatDatepicker, MatDatepickerModule,
   MatDialogModule,
   MatIconModule,
   MatInputModule,
-  MatListModule,
-  MatRadioModule,
+  MatListModule, MatNativeDateModule,
+  MatRadioModule, MatSelectModule,
   MatTabsModule,
   MatToolbarModule
 } from '@angular/material';
@@ -54,10 +54,14 @@ import { CreateComponent } from './membre/create/create.component';
     HttpClientModule,
     APP_ROUTES,
     FormsModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   providers: [
     HttpClient,
     MembreService,
+    MatDatepicker,
   ],
   bootstrap: [AppComponent]
 })

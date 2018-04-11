@@ -51,10 +51,10 @@ public class Membre {
     private String photo;
 
     @Property(name = "actif")
-    private boolean actif;
+    private boolean actif = true;
 
     @Property(name = "vivant")
-    private boolean vivant;
+    private boolean vivant = true;
 
     @Property(name = "numeroPortable")
     private String numeroPortable;

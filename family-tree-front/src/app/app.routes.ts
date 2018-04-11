@@ -9,7 +9,7 @@ const ROUTES: Routes = [
   { path: '', redirectTo: 'membre', pathMatch: 'full'},
   { path: 'membre/:id', component: MembreComponent },
   { path: 'edit/:id', component: UpdateComponent },
-  { path: 'membre/add', component: CreateComponent }
+  { path: 'membres/add', component: CreateComponent }
 ];
 
 export const APP_ROUTES = RouterModule.forRoot(ROUTES, {useHash: true});
