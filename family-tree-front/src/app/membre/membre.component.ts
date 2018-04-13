@@ -14,6 +14,12 @@ export class MembreComponent implements OnInit {
 
   private _person: any = {};
 
+  /**
+   * Constructor
+   * @param {ActivatedRoute} _route
+   * @param {Router} _router
+   * @param {MembreService} _membreService
+   */
   constructor(private _route: ActivatedRoute, private _router: Router, private _membreService: MembreService) {}
 
   /**
@@ -41,5 +47,4 @@ export class MembreComponent implements OnInit {
   public set person(person: any) {
     this._person = person;
   }
-
 }

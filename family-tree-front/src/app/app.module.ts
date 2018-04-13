@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
 import { MembreComponent } from './membre/membre.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,7 +25,6 @@ import { UpdateComponent } from './membre/update/update.component';
 import {MembreService} from './service/membre.service';
 import { CreateComponent } from './membre/create/create.component';
 import {AgmCoreModule} from '@agm/core';
-
 
 @NgModule({
   declarations: [

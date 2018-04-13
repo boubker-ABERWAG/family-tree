@@ -12,9 +12,9 @@ export class FormComponent implements OnInit {
 
   @Output('cancel')
   cancel$: EventEmitter<any>;
+
   @Output('submit')
   submit$: EventEmitter<any>;
-
 
   constructor() {
     this.submit$ = new EventEmitter();
@@ -25,8 +25,7 @@ export class FormComponent implements OnInit {
   /**
    * OnInit implementation
    */
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   /**
    * Function to handle component update
@@ -39,6 +38,7 @@ export class FormComponent implements OnInit {
       this.isUpdateMode = !!this.model;
     }
   }
+
   cancel() {
     this.cancel$.emit();
   }
@@ -46,5 +46,4 @@ export class FormComponent implements OnInit {
   submit(person: any) {
     this.submit$.emit(this.model);
   }
-
 }

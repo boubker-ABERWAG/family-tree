@@ -11,15 +11,13 @@ import 'rxjs/add/operator/mergeMap';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit {
-  person: any;
+  private _person: any;
 
   /**
    * Component constructor
    */
   constructor(private _route: ActivatedRoute, private _router: Router, private _membreService: MembreService) {
-    this.person = {
-      address: {}
-    };
+    this.person = {};
   }
 
   /**
@@ -32,13 +30,33 @@ export class UpdateComponent implements OnInit {
       .subscribe( (person: any) => this.person = person);
   }
 
+  /**
+   * Update membre
+   * @param person
+   */
   submit(person: any) {
     this._membreService.update(person)
       .subscribe( () => this._router.navigate(['/membre/' + person.pseudo]) );
   }
 
+  /**
+   * Abort edition
+   */
   cancel() {
     this._router.navigate(['/membre/' + this.person.pseudo]);
   }
 
+  /**
+   * @returns {any}
+   */
+  get person(): any {
+    return this._person;
+  }
+
+  /**
+   * @param value
+   */
+  set person(value: any) {
+    this._person = value;
+  }
 }

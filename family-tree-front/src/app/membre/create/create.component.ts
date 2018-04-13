@@ -8,7 +8,7 @@ import {MembreService} from '../../service/membre.service';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
-  person: any;
+  private _person: any;
 
   /**
    * Component constructor
@@ -22,13 +22,33 @@ export class CreateComponent implements OnInit {
    */
   ngOnInit() {}
 
+  /**
+   * Create membre
+   * @param person
+   */
   submit(person: any) {
     this._membreService.create(person)
       .subscribe( () => this._router.navigate(['/membre/' + person.pseudo]) );
   }
 
+  /**
+   * Abort creation
+   */
   cancel() {
     this._router.navigate(['/membre/Sanyanya']);
   }
 
+  /**
+   * @returns {any}
+   */
+  get person(): any {
+    return this._person;
+  }
+
+  /**
+   * @param value
+   */
+  set person(value: any) {
+    this._person = value;
+  }
 }
