@@ -27,7 +27,7 @@
         Location&nbsp;:&nbsp;<a href="">{{person.paysDeResidence}}</a>
       </div>
       <div class="buttons-info">
-        <a mat-button title="Locate">
+        <a mat-button title="Locate" (click)="locateMaps(person.longitudeNaissance, person.latitudeNaissance)">
           <mat-icon>map</mat-icon>
         </a>
         <a mat-button title="Edit" [routerLink]="['/edit', person.pseudo]">
@@ -39,4 +39,7 @@
       </div>
     </mat-card-content>
   </mat-card>
+  <agm-map *ngIf="locate" [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
 </section>

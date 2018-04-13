@@ -26,6 +26,7 @@ import { AddDialogComponent } from './membre/add-dialog/add-dialog.component';
 import { UpdateComponent } from './membre/update/update.component';
 import {MembreService} from './service/membre.service';
 import { CreateComponent } from './membre/create/create.component';
+import {AgmCoreModule} from '@agm/core';
 
 
 @NgModule({
@@ -57,6 +58,9 @@ import { CreateComponent } from './membre/create/create.component';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAaL5zyGxcps8z3GPxXiF_Or0qDPhuNVdU'
+    }),
   ],
   providers: [
     HttpClient,

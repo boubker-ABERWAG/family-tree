@@ -39,10 +39,10 @@ public class Membre {
     private String lieuDeNaissance;
 
     @Property(name = "latitudeNaissance")
-    private Long latitudeNaissance;
+    private Double latitudeNaissance;
 
     @Property(name = "longitudeNaissance")
-    private Long longitudeNaissance;
+    private Double longitudeNaissance;
 
     @Property(name = "description")
     private String description;
@@ -151,19 +151,19 @@ public class Membre {
         this.lieuDeNaissance = lieuDeNaissance;
     }
 
-    public Long getLatitudeNaissance() {
+    public Double getLatitudeNaissance() {
         return latitudeNaissance;
     }
 
-    public void setLatitudeNaissance(Long latitudeNaissance) {
+    public void setLatitudeNaissance(Double latitudeNaissance) {
         this.latitudeNaissance = latitudeNaissance;
     }
 
-    public Long getLongitudeNaissance() {
+    public Double getLongitudeNaissance() {
         return longitudeNaissance;
     }
 
-    public void setLongitudeNaissance(Long longitudeNaissance) {
+    public void setLongitudeNaissance(Double longitudeNaissance) {
         this.longitudeNaissance = longitudeNaissance;
     }
 
