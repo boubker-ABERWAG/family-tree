@@ -25,6 +25,13 @@ import { UpdateComponent } from './membre/update/update.component';
 import {MembreService} from './service/membre.service';
 import { CreateComponent } from './membre/create/create.component';
 import {AgmCoreModule} from '@agm/core';
+import {DraggableDirective} from './d3/directives/draggable.directive';
+import {ZoomableDirective} from './d3/directives/zoomable.directive';
+import {D3Service} from './d3/d3.service';
+import {GraphComponent} from './d3/visuals/graph/graph.component';
+import {LinkVisualComponent} from './d3/visuals/shared/link-visual/link-visual.component';
+import {NodeVisualComponent} from './d3/visuals/shared/node-visual/node-visual.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +41,13 @@ import {AgmCoreModule} from '@agm/core';
     FormComponent,
     AddDialogComponent,
     UpdateComponent,
-    CreateComponent
+    CreateComponent,
+    DraggableDirective,
+    ZoomableDirective,
+    GraphComponent,
+    LinkVisualComponent,
+    NodeVisualComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +76,7 @@ import {AgmCoreModule} from '@agm/core';
     HttpClient,
     MembreService,
     MatDatepicker,
+    D3Service,
   ],
   bootstrap: [AppComponent]
 })
